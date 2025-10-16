@@ -1,0 +1,82 @@
+name: 🐛 버그 리포트
+description: 버그나 문제를 발견하셨나요? 리포트해주세요.
+title: "[Bug]: "
+labels: ["bug", "needs-triage"]
+assignees:
+  - 
+body:
+  - type: markdown
+    attributes:
+      value: |
+        버그 리포트를 작성해주셔서 감사합니다. 가능한 한 자세히 작성해주시면 빠른 해결에 도움이 됩니다.
+  
+  - type: textarea
+    id: description
+    attributes:
+      label: 버그 설명
+      description: 발생한 버그에 대해 명확하고 간결하게 설명해주세요.
+      placeholder: 무엇이 잘못되었나요?
+    validations:
+      required: true
+  
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: 재현 방법
+      description: 버그를 재현하기 위한 단계를 작성해주세요.
+      placeholder: |
+        1. '...'로 이동
+        2. '...'를 클릭
+        3. '...'까지 스크롤
+        4. 에러 발생
+    validations:
+      required: true
+  
+  - type: textarea
+    id: expected
+    attributes:
+      label: 예상 동작
+      description: 어떤 동작을 예상하셨나요?
+      placeholder: 원래는 어떻게 작동해야 하나요?
+    validations:
+      required: true
+  
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: 스크린샷
+      description: 가능하다면 스크린샷이나 영상을 추가해주세요.
+      placeholder: 여기에 이미지를 드래그하거나 붙여넣기 하세요.
+    validations:
+      required: false
+  
+  - type: dropdown
+    id: browser
+    attributes:
+      label: 브라우저
+      description: 어떤 브라우저를 사용하고 계신가요?
+      options:
+        - Chrome
+        - Firefox
+        - Safari
+        - Edge
+        - 기타
+    validations:
+      required: false
+  
+  - type: input
+    id: version
+    attributes:
+      label: 버전
+      description: 어떤 버전을 사용하고 계신가요?
+      placeholder: "예: 1.0.0"
+    validations:
+      required: false
+  
+  - type: textarea
+    id: additional
+    attributes:
+      label: 추가 정보
+      description: 문제와 관련된 다른 정보가 있나요?
+    validations:
+      required: false
