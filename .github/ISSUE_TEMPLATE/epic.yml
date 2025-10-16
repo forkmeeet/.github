@@ -11,15 +11,6 @@ body:
         Epic은 여러 개의 하위 이슈로 구성되는 큰 단위의 작업입니다.
         하위 작업들은 이슈 생성 후 본문에 체크리스트로 추가해주세요.
   
-  - type: input
-    id: epic-title
-    attributes:
-      label: Epic 제목
-      description: 이 Epic의 목표를 한 줄로 요약해주세요.
-      placeholder: "예: 사용자 인증 시스템 구현"
-    validations:
-      required: true
-  
   - type: textarea
     id: description
     attributes:
