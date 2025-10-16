@@ -1,0 +1,171 @@
+name: 🎯 Epic
+description: 여러 작업을 포함하는 큰 기능이나 프로젝트를 등록합니다.
+title: "[Epic]: "
+labels: ["epic"]
+assignees:
+  - 
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Epic은 여러 개의 하위 이슈로 구성되는 큰 단위의 작업입니다.
+        하위 작업들은 이슈 생성 후 본문에 체크리스트로 추가해주세요.
+  
+  - type: input
+    id: epic-title
+    attributes:
+      label: Epic 제목
+      description: 이 Epic의 목표를 한 줄로 요약해주세요.
+      placeholder: "예: 사용자 인증 시스템 구현"
+    validations:
+      required: true
+  
+  - type: textarea
+    id: description
+    attributes:
+      label: 설명
+      description: 이 Epic이 달성하려는 목표와 범위를 설명해주세요.
+      placeholder: |
+        무엇을 만들려고 하나요?
+        왜 필요한가요?
+        어떤 가치를 제공하나요?
+    validations:
+      required: true
+  
+  - type: textarea
+    id: goals
+    attributes:
+      label: 목표
+      description: 이 Epic을 통해 달성하려는 구체적인 목표를 작성해주세요.
+      placeholder: |
+        - 사용자가 이메일/비밀번호로 로그인할 수 있다
+        - 소셜 로그인(구글, 깃허브)을 지원한다
+        - 비밀번호 찾기 기능을 제공한다
+    validations:
+      required: true
+  
+  - type: textarea
+    id: user-stories
+    attributes:
+      label: 사용자 스토리
+      description: 이 Epic과 관련된 사용자 관점의 시나리오를 작성해주세요.
+      placeholder: |
+        - ~로서, 나는 ~을(를) 원한다, 왜냐하면 ~
+        - 사용자로서, 나는 간편하게 로그인하고 싶다, 왜냐하면 매번 정보를 입력하는 것이 번거롭기 때문이다
+      render: markdown
+    validations:
+      required: false
+  
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: 완료 조건
+      description: 이 Epic이 완료되었다고 판단할 수 있는 기준을 작성해주세요.
+      placeholder: |
+        - [ ] 모든 하위 작업이 완료됨
+        - [ ] 테스트가 작성되고 통과됨
+        - [ ] 문서화가 완료됨
+        - [ ] 배포가 완료됨
+    validations:
+      required: true
+  
+  - type: dropdown
+    id: priority
+    attributes:
+      label: 우선순위
+      description: 이 Epic의 우선순위를 선택해주세요.
+      options:
+        - 🔴 긴급 (Critical)
+        - 🟠 높음 (High)
+        - 🟡 보통 (Medium)
+        - 🟢 낮음 (Low)
+    validations:
+      required: true
+  
+  - type: dropdown
+    id: size
+    attributes:
+      label: 예상 규모
+      description: 이 Epic의 크기를 추정해주세요.
+      options:
+        - XS (1주 이하)
+        - S (1-2주)
+        - M (2-4주)
+        - L (1-2개월)
+        - XL (2개월 이상)
+    validations:
+      required: false
+  
+  - type: input
+    id: milestone
+    attributes:
+      label: 마일스톤
+      description: 이 Epic이 속한 마일스톤을 입력해주세요.
+      placeholder: "예: v2.0, Q1 2025"
+    validations:
+      required: false
+  
+  - type: input
+    id: target-date
+    attributes:
+      label: 목표 완료일
+      description: 이 Epic을 언제까지 완료하고 싶으신가요?
+      placeholder: "예: 2025-12-31"
+    validations:
+      required: false
+  
+  - type: textarea
+    id: dependencies
+    attributes:
+      label: 의존성
+      description: 이 Epic을 시작하기 전에 완료되어야 할 다른 Epic이나 작업이 있나요?
+      placeholder: |
+        - #456 (데이터베이스 스키마 설계)
+        - #789 (API 인프라 구축)
+    validations:
+      required: false
+  
+  - type: textarea
+    id: stakeholders
+    attributes:
+      label: 관련 인원
+      description: 이 Epic과 관련된 팀원이나 이해관계자를 태그해주세요.
+      placeholder: |
+        - PM: @username1
+        - 개발: @username2
+        - 디자인: @username3
+    validations:
+      required: false
+  
+  - type: textarea
+    id: resources
+    attributes:
+      label: 참고 자료
+      description: 관련 문서, 디자인, 기술 스펙 등의 링크를 공유해주세요.
+      placeholder: |
+        - 요구사항 문서: https://...
+        - 디자인 파일: https://...
+        - 기술 스펙: https://...
+    validations:
+      required: false
+  
+  - type: textarea
+    id: notes
+    attributes:
+      label: 추가 노트
+      description: 기타 중요한 정보나 고려사항을 작성해주세요.
+    validations:
+      required: false
+  
+  - type: markdown
+    attributes:
+      value: |
+        ---
+        💡 **팁**: Epic 생성 후 하위 작업들을 다음과 같이 추가하세요:
+        ```markdown
+        ## 하위 작업
+        - [ ] #123 로그인 UI 구현
+        - [ ] #124 로그인 API 개발
+        - [ ] #125 회원가입 기능
+        ```
+        이렇게 하면 자동으로 진행률이 추적됩니다!
