@@ -1,0 +1,56 @@
+name: ❓ 질문
+description: 프로젝트에 대해 궁금한 점이 있나요?
+title: "[Question]: "
+labels: ["question"]
+assignees:
+  - 
+body:
+  - type: markdown
+    attributes:
+      value: |
+        질문하기 전에 [문서](https://docs.example.com)와 [FAQ](https://github.com/yourproject/wiki/FAQ)를 확인해주세요.
+  
+  - type: textarea
+    id: question
+    attributes:
+      label: 질문 내용
+      description: 무엇이 궁금하신가요?
+      placeholder: 질문을 자세히 작성해주세요...
+    validations:
+      required: true
+  
+  - type: textarea
+    id: context
+    attributes:
+      label: 상황 설명
+      description: 질문과 관련된 상황이나 배경을 설명해주세요.
+      placeholder: |
+        - 무엇을 하려고 하는지
+        - 어떤 문제에 직면했는지
+        - 이미 시도해본 것
+    validations:
+      required: false
+  
+  - type: textarea
+    id: code
+    attributes:
+      label: 관련 코드 (선택)
+      description: 관련된 코드가 있다면 공유해주세요.
+      render: javascript
+      placeholder: |
+        // 코드를 여기에 붙여넣기
+    validations:
+      required: false
+  
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: 체크리스트
+      description: 질문하기 전에 확인해주세요.
+      options:
+        - label: 문서를 확인했습니다
+          required: false
+        - label: 기존 이슈를 검색했습니다
+          required: false
+        - label: FAQ를 확인했습니다
+          required: false
