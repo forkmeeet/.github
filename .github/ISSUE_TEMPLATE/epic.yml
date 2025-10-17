@@ -43,7 +43,6 @@ body:
       placeholder: |
         - ~로서, 나는 ~을(를) 원한다, 왜냐하면 ~
         - 사용자로서, 나는 간편하게 로그인하고 싶다, 왜냐하면 매번 정보를 입력하는 것이 번거롭기 때문이다
-      render: markdown
     validations:
       required: false
   
