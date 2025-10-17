@@ -1,6 +1,6 @@
 name: 🎯 Epic
 description: 여러 작업을 포함하는 큰 기능이나 프로젝트를 등록합니다.
-title: "[Epic]: "
+title: "[Epic] "
 labels: ["epic"]
 assignees:
   - 
