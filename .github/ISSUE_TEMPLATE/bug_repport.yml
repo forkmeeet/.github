@@ -1,6 +1,6 @@
 name: 🐛 버그 리포트
 description: 버그나 문제를 발견하셨나요? 리포트해주세요.
-title: "[Bug]: "
+title: "[Bug] "
 labels: ["bug", "needs-triage"]
 assignees:
   - 
