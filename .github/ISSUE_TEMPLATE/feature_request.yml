@@ -1,6 +1,6 @@
 name: ✨ 기능 요청
 description: 새로운 기능이나 개선사항을 제안해주세요.
-title: "[Feature]: "
+title: "[Feature] "
 labels: ["enhancement", "needs-review"]
 assignees:
   - 
