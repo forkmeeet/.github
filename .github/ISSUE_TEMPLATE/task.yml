@@ -87,7 +87,6 @@ body:
         - [ ] 하위 작업 1
         - [ ] 하위 작업 2
         - [ ] 하위 작업 3
-      render: markdown
     validations:
       required: false
   
