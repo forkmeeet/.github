@@ -1,0 +1,4 @@
+{
+    "name": "Discord PR Webhook Workflow",
+    "description": "PR 변경되면 Discord Webhook 호출함",
+}
