@@ -1,13 +1,13 @@
 name: Discord webhook
 
 on: 
-  pull_requtest:
+  pull_request:
     types: [synchronize]
 
 jobs:
   call:
     runs-on: bubuntu-latest
-    step:
+    steps:
       - name: Call webhook
         env: 
           WEBHOOK:URL: ${{ secrets.PR_WEBHOOK_URL }}
