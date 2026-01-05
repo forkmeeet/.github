@@ -16,6 +16,13 @@ description: git diff를 분석하여 Conventional Commits 형식의 커밋 메�
 - 불필요한 설명 문장은 출력하지 않는다.
 - 마크다운 문법을 사용하지 않는다.
 - 커밋 메시지만 출력한다.
+- Co-Authored를 **절대** 추가하지 않는다.
 
 출력 형식:
 - /.github/commit_message_template.md 파일에 정의된 규칙을 따른다.
+
+후속 작업:
+- 커밋 메시지 출력 후 AskUserQuestion 도구를 사용하여 사용자에게 커밋 여부를 묻는다.
+- 옵션: "커밋하기" / "취소"
+- 사용자가 "커밋하기"를 선택하면 git commit을 실행한다.
+- 사용자가 "취소"를 선택하면 커밋하지 않는다.
